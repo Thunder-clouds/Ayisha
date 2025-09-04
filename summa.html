@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=100%, initial-scale=1.0" />
+  <title>Happy Birthday Lochana!</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body, html {
+      margin: 0 auto;
+      max-width: 100%;
+      
+      padding: 0;
+      font-size: 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      height: 100vh;
+      justify-content: center;
+      background: linear-gradient(120deg, #e4c4c8, #ff6075);
+      overflow: hidden;
+    }
+    .reveal-screen {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: #000;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      transition: all 1s ease;
+      opacity: 1;
+      pointer-events: all;
+    }
+    .reveal-screen.fade-out {
+      opacity: 0;
+      pointer-events: none;
+    }
+    h1 {
+      font-size: 3em;
+      margin: 0.5em 0;
+    }
+    p {
+      font-size: 1.2em;
+      max-width: 600px;
+      margin: 0 1em;
+      text-align: center;
+    }
+    .btn {
+      margin-top: 2em;
+      padding: 0.75em 1.5em;
+      background: #fff;
+      color: #ee9ca7;
+      border: none;
+      border-radius: 25px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+    .btn:hover {
+      background: #ee6c7e;
+      color: #fff;
+    }
+    .tap-msg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-size: 1.5em;
+      text-align: center;
+      animation: pulse 2s infinite;
+      z-index: 20;
+    }
+    @keyframes pulse {
+      0% { opacity: 1; }
+      50% { opacity: 0.5; }
+      100% { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="reveal-screen" id="revealScreen">
+    <div class="tap-msg" id="tapMsg">Tap anywhere to reveal 🎬</div>
+  </div>
+
+  <div id="content" style="opacity: 0; transition: opacity 1s ease; text-align: center; padding: 2em; color: #2c2c2c;">
+    <br><br><br><br><br><br><br><h1>Happy Teachers Day , Ayisha Mam! 🎉</h1>
+    <center><p>You’ve always been more than just a teacher to me—you guided me with wisdom 👩‍🏫, encouraged me with kindness 💖, and stood close like a sister 🤗. I’ll forever cherish the bond we share and the inspiration you’ve given me ✨🙏</p></center>
+    <center><p>I wish you the HAPPIEST Teachers Day..............💖💖 <br> </p></center>
+
+    <button class="btn" onclick="nextPage()">Oru chinna msg..💌</button>
+  </div>
+
+  <script>
+    const revealScreen = document.getElementById('revealScreen');
+    const tapMsg = document.getElementById('tapMsg');
+    const content = document.getElementById('content');
+
+    window.addEventListener('click', () => {
+      revealScreen.classList.add('fade-out');
+      setTimeout(() => {
+        revealScreen.style.display = 'none';
+        content.style.opacity = '1';
+      }, 1000);
+    });
+
+    function nextPage() {
+      window.location.href = "gallery.html";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lochana's Memories</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 2em;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: rgb(167, 121, 62);
+      background-image:url("bg.png");
+      background-attachment: fixed;
+      background-repeat:repeat-x;
+      color: #f17c7c;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    h1 {
+      margin-bottom: 1em;
+      font-size: 2.5em;
+    }
+    .gallery {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 2em;
+      flex-wrap: wrap;
+    }
+    .gallery img {
+      width: 57%;
+      height: 57%;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    .btn {
+      margin-top: 2em;
+      padding: 0.75em 1.5em;
+      background: #3a3838;
+      color: #a6c1ee;
+      border: none;
+      border-radius: 25px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+    .btn1 {
+      margin-top: 1em;
+      padding: 0.75em 1em;
+      background: #e96161e8;
+      color: #ffffff;
+      border: 10px solid #470f0f;
+      border-radius: 25px;
+      font-size: 2em;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+    .btn:hover {
+      background: #141b27;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="btn1">Something that means a lot to me💫</h1>
+  <div class="gallery">
+    <img src="img1.jpg" alt="Memory 1">
+    
+
+  </div>
+  <button class="btn" onclick="nextPage()">Next Surprise 💌</button>
+
+  <script>
+    function nextPage() {
+      window.location.href = "message.html";
+    }
+  </script>
+</body>
+</html>
